@@ -1,0 +1,9 @@
+.container img{
+    display: none;
+}
+
+@media (min-width: 800px /* 420px */){
+    .container img{
+        display: block;
+    }
+}

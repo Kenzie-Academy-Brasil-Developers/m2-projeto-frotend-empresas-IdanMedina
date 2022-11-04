@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/modal.css" />
+    <script defer type="module" src="../scripts/dashboard_admin.js"></script>
+    <link
+      rel="shortcut icon"
+      href="../assets/img/favicons/favicon.jpeg"
+      type="image/x-icon"
+    />
+    <title>Dashboard admin - Kenzie Empresas</title>
+  </head>
+  <body id="admin-body">
+    <header class="header-admin">
+      <div>
+        <img src="/src/assets/Ellipse 1.png" />
+        <img src="/src/assets/Kenzie Empresas.png" />
+      </div>
+      <button class="logout">Logout</button>
+    </header>
+    <main>
+      <div id="dep-box">
+        <h2>Departamentos</h2>
+        <select name="set-dep" id="set-dep">
+          <option value="" disabled selected>Selecionar Empresa</option>
+          <option value="all">Todos</option>
+        </select>
+        <span class = "create-btn">
+          <img src="../assets/plus.png" />
+          <p>Criar</p>
+        </span>
+      </div>
+      <ul id="dep-list"></ul>
+      <h2>Usuários cadastrados</h2>
+      <ul id="user-list"></ul>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+.show-modal{
+    position: fixed;
+    margin: 0 auto;
+    padding-top: 50px;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(70, 35, 167, 0.13);
+    animation: fadeInModal 1s linear;
+}
+.modal{
+    opacity:1;
+    z-index: 1;
+    width: 506px;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 32px 24px;
+gap: 46px;
+margin: 0 auto;
+background-color: whitesmoke;
+border-radius: 8px;
+}
+
+.show-modal .modal {
+    animation: moveModal 1s ease;
+} 
+
+@keyframes moveModal { 
+    0%{transform: translateY(-70%);
+    opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity:1
+    }
+}
+
+@keyframes fadeInModal {
+    0% {opacity:0}
+    100% {opacity: 1}
+}
