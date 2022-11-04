@@ -19,11 +19,12 @@ export function renderUserInfo() {
     
     email.innerText = reqInfo.email;
     
-    profLevel.innerText = reqInfo.professional_level;
+    const capitalizeProfLvl = reqInfo.professional_level[0].toUpperCase() + reqInfo.professional_level.substr(1);
+    profLevel.innerText = capitalizeProfLvl;
     
     if(reqInfo.kind_of_work){
     const capitalizekindWork = reqInfo.kind_of_work[0].toUpperCase() + reqInfo.kind_of_work.substr(1);
-    kindWork.innertext = capitalizekindWork;
+    kindWork.innerText = capitalizekindWork;
     }
     
     info.append(email, profLevel, kindWork);
