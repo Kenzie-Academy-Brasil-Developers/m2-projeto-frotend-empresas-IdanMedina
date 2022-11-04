@@ -83,12 +83,16 @@ export function renderUser(user) {
 
   if (user.is_admin === false) {
 
-    const capitalizeProfLvl = user.professional_level[0].toUpperCase() + user.professional_level.substr(1);
-    const capitalizeKindWork = user.kind_of_work[0].toUpperCase() + user.kind_of_work.substr(1);
+    if(user.kind_of_work){
+      const capitalizekindWork = user.kind_of_work[0].toUpperCase() + user.kind_of_work.substr(1);
+      kindWork.innerText = capitalizekindWork;
+      console.log(capitalizekindWork)
+      }
 
+    const capitalizeProfLvl = user.professional_level[0].toUpperCase() + user.professional_level.substr(1);
+       
     name.innerText = user.username;
     description.innerText = capitalizeProfLvl;
-    kindWork.innerText = capitalizeKindWork;
     edit.id = user.uuid;
     remove.id = user.uuid;
     edit.src = "../assets/edit_pen.png";
