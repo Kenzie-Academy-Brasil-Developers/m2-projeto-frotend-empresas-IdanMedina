@@ -5,6 +5,8 @@ export function toltip(text){
     const close = document.createElement("img")
     const message = document.createElement("p");
 
+    tip.classList.add("toltip");
+
     tip.id = "tip";
     close.src = "../assets/Vector X.png";
     message.innerText = text;

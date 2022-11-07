@@ -21,6 +21,17 @@
     border: transparent;
     cursor:pointer;
 }
+.start-box form select{
+    height: 52px;
+    padding-left: 17px;
+    padding-right: 19px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+color: rgba(0, 0, 0, 0.5);
+}
+
 @media (min-width: 800px /* 420px */){
     #set-sector {
         background: url("../assets/Arrow 2.png") no-repeat var(--color-primary);

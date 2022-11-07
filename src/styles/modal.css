@@ -27,6 +27,20 @@ border-radius: 8px;
     animation: moveModal 1s ease;
 } 
 
+.toltip{
+    position: fixed;
+    bottom: 5%;
+    left: 15%;
+    padding: 39px 43px;
+    font-family: "Inter", sans-serif;
+    background: rgba(255, 255, 255, 0.33);
+}
+.toltip img{
+    position: absolute;
+    top:5px;
+    left:160px;
+margin-bottom: 16px;
+}
 @keyframes moveModal { 
     0%{transform: translateY(-70%);
     opacity: 0;
