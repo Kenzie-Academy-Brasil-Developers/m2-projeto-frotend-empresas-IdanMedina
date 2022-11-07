@@ -1,0 +1,40 @@
+.comp-home{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-black);
+}
+.hour-home{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 16px;
+    color: var(--color-black);
+}
+.sector-home{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color:var(--color-primary);
+    max-width: fit-content;
+height: 32px;
+border: 1px solid var(--color-primary);
+border-radius: 255px;
+padding: 6px 16px;
+}
+.start-box h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+font-size: 40px;
+line-height: 60px;
+color: var(--color-black);
+}
+.start-box p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+}
+@media (min-width: 800px /* 420px */){
+
+}

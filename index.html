@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/global.css" />
     <link rel="stylesheet" href="./src/styles/menu.css" />
-    <link rel="stylesheet" href="./src/styles/margins.css" />
+    <link rel="stylesheet" href="./src/styles/select.css" />
     <link rel="stylesheet" href="./src/styles/colors.css" />
-    <link rel="stylesheet" href="./src/styles/fonts.css" />
+    <link rel="stylesheet" href="./src/styles/text.css" />
     <link rel="stylesheet" href="./src/styles/buttons.css" />
     <link rel="stylesheet" href="./src/styles/inputs.css" />
     <link rel="stylesheet" href="./src/styles/reset.css" />
@@ -20,11 +20,14 @@
 </head>
 <body>
     <header class="header-home">
-      <img src="./src/assets/Ellipse 1.png">
-      <img src="./src/assets/Kenzie Empresas.png">
+      <div class="logo">
+        <img src="./src/assets/Ellipse 1.png">
+        <img src="./src/assets/Kenzie Empresas.png">
+      </div>
     </header>
     <main class="container">
       <img src="./src/assets/img/home-canvas.png">
+      <div class="info-home">
       <div class="set-sector">
         <select name="set-sector" id="set-sector">
           <option value="" disabled selected>Selecionar Setor</option>
@@ -32,6 +35,7 @@
         </select>
       </div>
       <ul class="home-list"></ul>
+      </div>
     </main>
 </body>
 </html>

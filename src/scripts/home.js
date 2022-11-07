@@ -4,14 +4,21 @@ const header = document.querySelector(".header-home");
 const ul = document.querySelector(".home-list");
 const select = document.getElementById("set-sector");
 
-function homeButtons() {
+export function homeButtons() {
+  const div = document.createElement("div");
   const boxBtn = document.createElement("div");
   const loginBtn = document.createElement("button");
   const registerBtn = document.createElement("button");
   const closeBtn = document.createElement("span");
   const closeImg = document.createElement("img");
 
+  loginBtn.classList.add("drop-btn");
+  registerBtn.classList.add("drop-btn");
+  div.classList.add("none");
+  div.id = "box-btn";
+
   closeImg.src = "/src/assets/Vector X.png";
+  closeImg.id="close-box-btn";
   loginBtn.innerText = "Login";
   registerBtn.innerText = "Cadastro";
 
@@ -26,21 +33,22 @@ function homeButtons() {
   });
 
   closeBtn.addEventListener("click", () => {
-    const drop = document.getElementById("dropdown");
-
-    closeBtn.classList.toggle("none");
-    boxBtn.classList.toggle("none");
-    drop.classList.toggle("none");
+    const down = document.getElementById("dropdown");
+    div.classList.add("none");
+    down.classList.remove("none");
   });
 
   closeBtn.appendChild(closeImg);
   boxBtn.append(loginBtn, registerBtn);
-  header.append(closeBtn, boxBtn);
+  div.append(closeBtn, boxBtn);
+  header.appendChild(div)
 }
 
 export function dropdown() {
   const down = document.createElement("div");
   const imgDrop = document.createElement("img");
+
+  const divBtn = document.getElementById("box-btn");
 
   down.id = "dropdown";
 
@@ -50,16 +58,21 @@ export function dropdown() {
   header.appendChild(down);
 
   down.addEventListener("click", () => {
-    down.classList.toggle("none");
-    homeButtons();
+    down.classList.add("none");
+    divBtn.classList.remove("none");
   });
 }
 
-export function renderCompany(company) {
+function renderCompany(company) {
   const card = document.createElement("li");
   const name = document.createElement("h3");
   const hours = document.createElement("p");
   const sector = document.createElement("span");
+
+  card.classList.add("card-home");
+  name.classList.add("comp-home");
+  hours.classList.add("hour-home")
+  sector.classList.add("sector-home");
 
   name.innerText = company.name;
   hours.innerText = company.opening_hours;

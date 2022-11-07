@@ -1,4 +1,6 @@
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Inter:wght@600&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Inter:wght@600&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Inter:wght@600&family=Poppins&display=swap');
 
 * {
   margin: 0;
@@ -7,11 +9,11 @@
 }
 
 :root {
-  --color-primary: #5746af;
-  --color-grey-1: #0d1114;
-  --color-grey-2: #11181c;
-  --color-grey-3: #d7dbdf;
-  --color-grey-4: #e6e8eb;
+  --color-primary: #4200FF;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-alert: #CE4646;
+  --color-confirm: #4BA036;
 
   --font-title-1: 48px;
   --font-title-2: 38px;
@@ -41,17 +43,40 @@
   --paddingInlineButton: 32px;
   --paddingLeft: 22px;
 
-  --container-1: 1200px;
+  --container-1: 1178px;
   --container-2: 900px;
 }
 
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+body header{
+  position: fixed;
+  padding: 0 5% 0 2%;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+ }
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  margin-left: 0.5rem; 
+}
+ 
 button {
   cursor: pointer;
 }
 
 img {
   object-fit: fill;
-  max-width: 100%;
+  
 }
 
 ul {
@@ -59,7 +84,8 @@ ul {
 }
 
 .container {
-  max-width: var(--container-1);
+  padding-top: 60px;
+  
   margin: 0 auto;
 }
 
@@ -68,5 +94,12 @@ ul {
 }
 
 @media (min-width: 800px /* 420px */){
-
+  body header{
+    height: 80px;
+    z-index: 1;
+   }
+   .container {
+    max-width: var(--container-1);
+    padding-top: 123px;
+   }
 }

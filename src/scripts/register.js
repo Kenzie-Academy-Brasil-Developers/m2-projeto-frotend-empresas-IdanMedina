@@ -10,13 +10,20 @@ const registerBtn = document.getElementById("register");
 const returnBtn = document.getElementById("go-back-home");
 
 function registerButtons(){
+    const div = document.createElement("div");
     const boxBtn = document.createElement("div");
     const homeBtn = document.createElement("button");
     const loginBtn = document.createElement("button");
     const closeBtn = document.createElement("span");
     const closeImg = document.createElement("img");
 
+    homeBtn.classList.add("drop-btn");
+    loginBtn.classList.add("drop-btn");
+    div.classList.add("none");
+    div.id = "box-btn";
+
     closeImg.src="/src/assets/Vector X.png";
+    closeImg.id="close-box-btn";
     homeBtn.innerText="Home";
     loginBtn.innerText="Login";
 
@@ -31,21 +38,22 @@ function registerButtons(){
     })
 
     closeBtn.addEventListener("click", () => {
-        const drop = document.getElementById("dropdown");
-
-        closeBtn.classList.toggle("none");
-        boxBtn.classList.toggle("none");
-        drop.classList.toggle("none")
+        const down = document.getElementById("dropdown");
+    div.classList.add("none");
+    down.classList.remove("none");
     })
 
     closeBtn.appendChild(closeImg);
     boxBtn.append(homeBtn, loginBtn);
-    header.append(closeBtn, boxBtn)
+    div.append(closeBtn, boxBtn);
+    header.appendChild(div);
 }
-
+registerButtons()
 function dropdown(){
     const down = document.createElement("div");
     const imgDrop = document.createElement("img");
+
+    const divBtn = document.getElementById("box-btn");
 
     down.id = "dropdown";
 
@@ -55,8 +63,8 @@ function dropdown(){
     header.appendChild(down);
 
     down.addEventListener("click", () => {
-        down.classList.toggle("none")
-        registerButtons()
+        down.classList.add("none");
+        divBtn.classList.remove("none");
     })
 }
 dropdown()

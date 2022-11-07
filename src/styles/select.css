@@ -1,0 +1,33 @@
+.set-sector{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+#set-sector {
+    display: flex;
+    -webkit-appearance: none;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-white);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    background: url("../assets/Arrow 2.png") no-repeat var(--color-primary);
+    background-position: 95%;
+    width: 95%;
+    height: 52px;
+    border: transparent;
+    cursor:pointer;
+}
+@media (min-width: 800px /* 420px */){
+    #set-sector {
+        background: url("../assets/Arrow 2.png") no-repeat var(--color-primary);
+        background-position: 500px;
+        width: 550px;
+}
+.set-sector{
+    margin: 0 auto;
+}
+}

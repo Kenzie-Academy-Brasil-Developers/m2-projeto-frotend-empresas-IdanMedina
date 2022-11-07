@@ -8,13 +8,20 @@ const loginBtn = document.getElementById("login");
 const assignBtn = document.getElementById("back-to-register");
 
 function loginButtons() {
+  const div = document.createElement("div");
   const boxBtn = document.createElement("div");
   const homeBtn = document.createElement("button");
   const registerBtn = document.createElement("button");
   const closeBtn = document.createElement("span");
   const closeImg = document.createElement("img");
 
+  homeBtn.classList.add("drop-btn");
+  registerBtn.classList.add("drop-btn");
+  div.classList.add("none");
+  div.id = "box-btn";
+
   closeImg.src = "/src/assets/Vector X.png";
+  closeImg.id="close-box-btn";
   homeBtn.innerText = "Home";
   registerBtn.innerText = "Cadastro";
 
@@ -29,21 +36,23 @@ function loginButtons() {
   });
 
   closeBtn.addEventListener("click", () => {
-    const drop = document.getElementById("dropdown");
-
-    closeBtn.classList.toggle("none");
-    boxBtn.classList.toggle("none");
-    drop.classList.toggle("none");
+    const down = document.getElementById("dropdown");
+    div.classList.add("none");
+    down.classList.remove("none");
   });
 
   closeBtn.appendChild(closeImg);
   boxBtn.append(homeBtn, registerBtn);
-  header.append(closeBtn, boxBtn);
+  div.append(closeBtn, boxBtn);
+  header.appendChild(div);
 }
+loginButtons();
 
 function dropdown() {
   const down = document.createElement("div");
   const imgDrop = document.createElement("img");
+
+  const divBtn = document.getElementById("box-btn");
 
   down.id = "dropdown";
 
@@ -53,8 +62,8 @@ function dropdown() {
   header.appendChild(down);
 
   down.addEventListener("click", () => {
-    down.classList.toggle("none");
-    loginButtons();
+    down.classList.add("none");
+    divBtn.classList.remove("none");
   });
 }
 dropdown();
